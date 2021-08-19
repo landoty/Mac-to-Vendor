@@ -7,7 +7,7 @@ def mac_to_oui(mac) -> str:
     return(mac[:6])
 
 def oui_to_vendor(oui) -> str:
-    with open("oui_2.txt", "r", encoding="utf8") as vendor_file:
+    with open("oui_vendors.txt", "r", encoding="utf8") as vendor_file:
         for line in vendor_file:
             if re.search(oui, line):
                 return(line[22:])
@@ -16,7 +16,7 @@ def main() -> None:
     path = sys.argv[1]
     break_line = "-----------------------------------"
     print(break_line)
-    mac_column = input("MAC Address Column Number: ")
+    mac_column = int(input("MAC Address Column Number: "))
     print(break_line)
 
     print("Opening excel sheet...")
@@ -39,7 +39,7 @@ def main() -> None:
             sheet.cell(i,mac_column+1).value=vendor
             known_vendors[oui] = vendor
     wb.save(path)
-    print(f"Vendor report complete.\n See updated {path}\n{break_line}")
+    print(f"Vendor report complete.\nSee updated {path}\n{break_line}")
 
 if __name__ == "__main__":
     main()
