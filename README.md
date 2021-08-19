@@ -7,7 +7,7 @@ column
 Without a local database or a reliable and free API, the best way to relate
 MAC addresses to their vendors is through some intuitive file I/O. This tool
 searches from a publicly-available text file from the IEEE of `Organizationally
-Unique Identifiers **(OUI)**` and writes the vendor name to the same Excel
+Unique Identifiers (OUI)` and writes the vendor name to the same Excel
 file as the MAC address is pulled from
 
 ### Time and Power Considerations
@@ -17,8 +17,8 @@ originally developed this tool for the University of Kansas Network Architecture
 team, in which we required this tool to be ran across 50,000+ records in a
 single report.
 
-As such, this tool stores each entry within a dictionary `- **key** = OUI and
-**value** = Vendor -` and is searched before searching within the IEEE file.
+As such, this tool stores each entry within a dictionary `- key = OUI and
+value = Vendor -` and is searched before searching within the IEEE file.
 Institutions, like KU, often use similar devices from the same Vendors, so we
 can see how it much more efficient.
 
@@ -30,7 +30,7 @@ cURL by sending a cURL command directly to the local machine via the Python `os`
 library. This could of course be complicated with a HTTP request via the `requests`
 library, but this is automation. Let's make things simple
 
-Running ```sh $remove_lines.py``` file will remove unnecessary information from the
+Running the `remove_lines.py` file will remove unnecessary information from the
 raw IEEE file as it contains Vendor address and contact information as well as
 the Hex form of the OUI. For this tool, we are using Base16
 
