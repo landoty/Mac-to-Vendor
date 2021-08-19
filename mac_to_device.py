@@ -24,19 +24,19 @@ def main() -> None:
     print(f"Opened!\n{break_line}\nWorking...")
 
     sheet = wb.active
-    sheet.insert_cols(8)
-    sheet.cell(1,8).value="Node Vendor"
+    sheet.insert_cols(mac_column+1)
+    sheet.cell(1,mac_column+1).value="Node Vendor"
     row_count = sheet.max_row
 
     known_vendors = {}
     for i in range(2,row_count):
-        mac = sheet.cell(i,7).value
+        mac = sheet.cell(i,mac_column).value
         oui = mac_to_oui(mac)
         if oui in known_vendors:
-            sheet.cell(i,8).value=known_vendors[oui]
+            sheet.cell(i,mac_column+1).value=known_vendors[oui]
         else:
             vendor = oui_to_vendor(oui)
-            sheet.cell(i,8).value=vendor
+            sheet.cell(i,mac_column+1).value=vendor
             known_vendors[oui] = vendor
     wb.save(path)
     print(f"Vendor report complete.\n See updated {path}\n{break_line}")
