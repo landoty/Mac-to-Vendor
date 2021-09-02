@@ -68,7 +68,7 @@ ACB1EE     (base 16)		SHENZHEN FENDA TECHNOLOGY CO., LTD
 F8ADCB     (base 16)		HMD Global Oy
 D462EA     (base 16)		HUAWEI TECHNOLOGIES CO.,LTD
 54BAD6     (base 16)		HUAWEI TECHNOLOGIES CO.,LTD
-94DC4E     (base 16)		AEV, spol. s r. o.
+94DC4E     (base 16)		AEV, spol.s r. o.
 1442FC     (base 16)		Texas Instruments
 AC5D5C     (base 16)		FN-LINK TECHNOLOGY LIMITED
 A4AE11     (base 16)		Hon Hai Precision Ind. Co., Ltd.
