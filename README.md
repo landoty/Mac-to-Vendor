@@ -20,13 +20,13 @@ single report.
 As such, this tool stores each entry within a dictionary `- key = OUI and
 value = Vendor -` and is searched before searching within the IEEE file.
 Institutions, like KU, often use similar devices from the same Vendors, so we
-can see how it much more efficient.
+can see how it is much more efficient.
 
 More specifically, this tool reduced runtime by nearly **eighty percent**.
 
 ### Getting IEEE file
-How would you get a text file from a public website? **cURL**. This tool utilizes
-cURL by sending a cURL command directly to the local machine via the Python `os`
+How would you get a text file from a public website? **cURL**. This tool sends a 
+cURL command directly from the local machine via the Python `os`
 library. This could of course be complicated with a HTTP request via the `requests`
 library, but this is automation. Let's make things simple
 
